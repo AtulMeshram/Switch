@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7CF7BDB-C01B-4865-9C9C-CE63F8B81223}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SwitchPlus</RootNamespace>
+    <AssemblyName>Switch</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Atul Meshram\Desktop\SWITCH\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en-IN</TargetCulture>
+    <ProductName>Switch</ProductName>
+    <PublisherName>Atul Meshram</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SwitchPlus.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Battery-Power.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>724E56B64C43F642A8D75346BAB68C43475FC90F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Switch_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="BusyBar">
+      <HintPath>..\..\..\VC# Programs\SWITCH\SWITCH\Switch\Switch\BusyBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VistaStyleProgressBar">
+      <HintPath>.\VistaStyleProgressBar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImageStreamer.cs" />
+    <Compile Include="MjpegWriter.cs" />
+    <Compile Include="StickyWindow.cs" />
+    <Compile Include="Switch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Switch.Designer.cs">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwitchInterface.cs" />
+    <Compile Include="SwitchRemote.cs" />
+    <Compile Include="SwitchServiceClass.cs" />
+    <EmbeddedResource Include="Switch.resx">
+      <DependentUpon>Switch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\Xperia.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Battery-Power.ico" />
+    <None Include="Resources\InterfaceClient.png" />
+    <None Include="Resources\RInfo.png" />
+    <None Include="Resources\RemoteInfo.png" />
+    <None Include="Resources\R.png" />
+    <None Include="Resources\G.png" />
+    <None Include="Resources\Remote.png" />
+    <None Include="Resources\Remoteller.png" />
+    <None Include="Resources\Destop.png" />
+    <None Include="Resources\Connect.png" />
+    <None Include="Resources\Cal.png" />
+    <None Include="Resources\PNL.png" />
+    <None Include="Resources\PnlCD.png" />
+    <None Include="Resources\Panel_New.png" />
+    <None Include="Resources\StUp.png" />
+    <None Include="Resources\Wait2.gif" />
+    <None Include="Resources\MonitorWait.png" />
+    <None Include="Resources\BroadcasterActive.png" />
+    <None Include="Resources\BroadcastingInfo.png" />
+    <None Include="Resources\BtnMonitorFocus.png" />
+    <None Include="Resources\BtnMonitor.png" />
+    <None Include="Resources\BtnMonitorPressed.png" />
+    <None Include="Resources\BtnBroadcasterFocus.png" />
+    <None Include="Resources\BtnBroadcaster.png" />
+    <None Include="Resources\BtnBroadcasterPressed.png" />
+    <None Include="Resources\BroadcasterOff.png" />
+    <None Include="Resources\MonitorPanel.png" />
+    <None Include="Resources\Broadcaster.png" />
+    <None Include="Resources\MirrorInfo.png" />
+    <None Include="Resources\BtnMirrorFocus.png" />
+    <None Include="Resources\BtnMirror.png" />
+    <None Include="Resources\BtnMirrorPressed.png" />
+    <None Include="Resources\PanelArrow.png" />
+    <None Include="Resources\Q.png" />
+    <None Include="Resources\CustomP.png" />
+    <None Include="Resources\TabCD_H.png" />
+    <None Include="Resources\TabCD.png" />
+    <None Include="Resources\TabCDActive.png" />
+    <None Include="Resources\TabDL_H.png" />
+    <None Include="Resources\TabDL.png" />
+    <None Include="Resources\TabDLActive.png" />
+    <None Include="Resources\TabSF_H.png" />
+    <None Include="Resources\TabSF.png" />
+    <None Include="Resources\TabSFActive.png" />
+    <None Include="Resources\ResetInfo.png" />
+    <None Include="Resources\Start_CDInfo.png" />
+    <None Include="Resources\TimeModeInfo.png" />
+    <None Include="Resources\StopInfo.png" />
+    <None Include="Resources\BtnNoFocus.png" />
+    <None Include="Resources\BtnNo.png" />
+    <None Include="Resources\BtnNoPressed.png" />
+    <None Include="Resources\BtnYesPressed.png" />
+    <None Include="Resources\BtnYesFocus.png" />
+    <None Include="Resources\BtnYes.png" />
+    <None Include="Resources\MsgBx.png" />
+    <None Include="Resources\BruteInfo.png" />
+    <None Include="Resources\Brute.png" />
+    <None Include="Resources\Brutally.png" />
+    <None Include="Resources\BtnStopPressed.png" />
+    <None Include="Resources\BtnStopHover.png" />
+    <None Include="Resources\BtnStop.png" />
+    <None Include="Resources\Loading.gif" />
+    <None Include="Resources\Alert_32.png" />
+    <None Include="Resources\PanelInfo200.png" />
+    <None Include="Resources\Chord.wav" />
+    <None Include="Resources\Alert.png" />
+    <None Include="Resources\BtnOKFocus.png" />
+    <None Include="Resources\BtnOK.png" />
+    <None Include="Resources\BtnOKPressed.png" />
+    <None Include="Resources\MsgBox.png" />
+    <None Include="Resources\CustomA.png" />
+    <None Include="Resources\ComboDropA.png" />
+    <None Include="Resources\Custom.png" />
+    <None Include="Resources\ComboDropP.png" />
+    <None Include="Resources\ComboDrop.png" />
+    <None Include="Resources\RadioButtonDP.png" />
+    <None Include="Resources\RadioButtonDH.png" />
+    <None Include="Resources\RadioButtonD.png" />
+    <None Include="Resources\RadioButtonAP.png" />
+    <None Include="Resources\RadioButtonAH.png" />
+    <None Include="Resources\RadioButtonA.png" />
+    <None Include="Resources\ClockSmall.png" />
+    <None Include="Resources\TimerSmall.png" />
+    <None Include="Resources\CalenderSmall.png" />
+    <None Include="Resources\Panel.png" />
+    <None Include="Resources\BtnStart.png" />
+    <None Include="Resources\BtnStartPressed.png" />
+    <None Include="Resources\BtnStartFocus.png" />
+    <None Include="Resources\BtnResetPressed.png" />
+    <None Include="Resources\BtnResetHover.png" />
+    <None Include="Resources\BtnReset.png" />
+    <None Include="Resources\rb2A.png" />
+    <None Include="Resources\rb2.png" />
+    <None Include="Resources\rb1A.png" />
+    <None Include="Resources\rb1.png" />
+    <None Include="Resources\PnlCountdown.png" />
+    <None Include="Resources\ScheduleFor.png" />
+    <None Include="Resources\Daily.png" />
+    <None Include="Resources\Countdown.png" />
+    <None Include="Resources\PanelGrey.png" />
+    <None Include="Resources\PanelGreen.png" />
+    <None Include="Resources\Interface.png" />
+    <None Include="Resources\LockHover.png" />
+    <None Include="Resources\Lock.png" />
+    <None Include="Resources\LockPressed.png" />
+    <None Include="Resources\LockNormal.png" />
+    <None Include="Resources\LogoffHover.png" />
+    <None Include="Resources\Logoff.png" />
+    <None Include="Resources\LogoffPressed.png" />
+    <None Include="Resources\LogoffNormal.png" />
+    <None Include="Resources\HibernateNormal.png" />
+    <None Include="Resources\HibernateHover.png" />
+    <None Include="Resources\Hibernate.png" />
+    <None Include="Resources\HibernatePressed.png" />
+    <None Include="Resources\Sleep.png" />
+    <None Include="Resources\SleepPressed.png" />
+    <None Include="Resources\SleepNormal.png" />
+    <None Include="Resources\SleepHover.png" />
+    <None Include="Resources\RestartNormal.png" />
+    <None Include="Resources\RestartHover.png" />
+    <None Include="Resources\Restart.png" />
+    <None Include="Resources\RestartPressed.png" />
+    <None Include="Resources\ShutdownNormal.png" />
+    <None Include="Resources\ShutdownHover.png" />
+    <None Include="Resources\Shutdown.png" />
+    <None Include="Resources\ShutdownPress.png" />
+    <None Include="Resources\MinHover.png" />
+    <None Include="Resources\ClosePress.png" />
+    <None Include="Resources\CloseHover.png" />
+    <None Include="Resources\MinPress.png" />
+    <None Include="Resources\MinNormal.png" />
+    <None Include="Resources\CloseNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

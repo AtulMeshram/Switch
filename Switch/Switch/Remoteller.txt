@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        #btn {
+			border: none;
+			font-family: inherit;
+			font-size: inherit;
+			color: inherit;
+			background: none;
+			cursor: pointer;
+			margin: .5em .25em;
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 700;
+			outline: none;
+			position: relative;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			background: #cb4e4e;
+			color: #fff;
+			box-shadow: 0 6px #ab3c3c;
+			-webkit-transition: none;
+			-moz-transition: none;
+			transition: none;
+			border-radius: 50%;
+			width: 7em;
+			height: 7em;
+			padding: 0;
+        }
+        #btnBox {
+			border: none;
+			font-family: inherit;
+			font-size: inherit;
+			color: inherit;
+			background: none;
+			cursor: pointer;
+			margin: .5em .25em;
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 700;
+			outline: none;
+			position: relative;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			background: #cb4e4e;
+			color: #fff;
+			box-shadow: 0 6px #ab3c3c;
+			-webkit-transition: none;
+			-moz-transition: none;
+			transition: none;
+			border-radius: 10%;
+			padding: 0;
+        }
+    </style>
+		<script type="text/javascript">
+			function buttonUp(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/up","true");
+			xmlhttp.send();
+		}
+			function buttonDown(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/down","true");
+			xmlhttp.send();
+		}
+		function buttonLeft(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/left","true");
+			xmlhttp.send();
+		}
+		function buttonRight(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/right","true");
+			xmlhttp.send();
+		}
+		function buttonEsc(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/esc","true");
+			xmlhttp.send();
+		}
+		function buttonBackspace(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/backspace","true");
+			xmlhttp.send();
+		}
+		function buttonHome(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/home","true");
+			xmlhttp.send();
+		}
+		function buttonTab(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/tab","true");
+			xmlhttp.send();
+		}
+		function buttonDelete(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/delete","true");
+			xmlhttp.send();
+		}
+		function buttonEnd(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/end","true");
+			xmlhttp.send();
+		}
+		function buttonEnter(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/enter","true");
+			xmlhttp.send();
+		}
+</script>
+</head>
+<body bgcolor="000000">
+	<font color="ffffff" size="3em" face="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif">
+	<center><h1>Remoteller</h1></center><br/>
+    <p align="center">
+        <input id="btn" type="button" value="Up" onclick="buttonUp()" />
+        <br />
+		<input id="btn" type="button" value="Left" onclick="buttonLeft()" />
+        <input id="btn" type="button" value="Down" onclick="buttonDown()" />
+		<input id="btn" type="button" value="Right" onclick="buttonRight()" />
+		<br/><br/>
+		<input id="btnBox" type="button" value="Esc" style="height:4em; width:7em" onclick="buttonEsc()" />
+        <input id="btnBox" type="button" value="Backspace" style="height:4em; width:10em" onclick="buttonBackspace()" />
+        <input id="btnBox" type="button" value="Home" style="height:4em; width:7em" onclick="buttonHome()" /><br/>
+        <input id="btnBox" type="button" value="Tab" style="height:4em; width:7em" onclick="buttonTab()" />
+        <input id="btnBox" type="button" value="Delete" style="height:4em; width:10em" onclick="buttonDelete()" />
+        <input id="btnBox" type="button" value="End" style="height:4em; width:7em" onclick="buttonEnd()" /><br/>
+        <input id="btnBox" type="button" value="Enter" style="height:4em; width:25.5em" onclick="buttonEnter()" /><br/>    
+	</p>
+	</font>
+</body>
+</html>
